@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>PARTH</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+> 
+
+</head>
+
+<style>
+
+/* =========================================================
+ORIGINAL WRT CSS
+DO NOT CHANGE
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+</style>
+
+<style>
+
+*{
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  
+}
+
+h2{
+  color: indianred;
+  border: 3px solid green;
+  border-radius: 7px;
+  background-color: aquamarine;
+  text-align: center;
+}
+
+#up{
+  color: violet;
+  text-align: center;
+  background-color: yellow;
+  border: 3px solid violet;
+  border-radius: 10px;
+}
+
+input[type="text"]{
+  padding: 15px;
+  margin: 15px;
+  width: 70%;
+  border: 2px solid green;
+  border-radius: 7px;
+}
+
+input[type="number"]{
+  padding: 15px;
+  margin: 15px;
+  width: 37%;
+  border: 2px solid green;
+  border-radius: 7px;
+}
+
+input[type="date"]{
+  padding: 10px;
+  margin: 10px;
+  width: 35%;
+  border: 2px solid green;
+  border-radius: 7px;
+}
+
+img {
+  padding: 19px;
+  margin: 110px;
+  border:2px solid red;
+}
+
+footer{
+  color: sienna;
+  border: 2px solid brown;
+  text-align: center;
+  font-family: sans-serif,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.end{
+  color: darkcyan;
+  border: 2px solid navajowhite;
+}
+
+.endd{
+  color: darkcyan;
+  border: 2px solid blue;
+  border-radius: 9px
+}
+
+textarea{
+  padding: 10px;
+  width: 70%;
+  border: 2px solid goldenrod;
+  border-radius: 11px
+}
+
+input[type="sumbit"]{
+  border: 2px solid deepskyblue;
+}
+
+form{
+  color: blue;
+}
+
+a{
+  overflow: none;
+}
+
+ul li{
+  color: yellow;
+  float: left;
+  text-decoration: none;
+  list-style: none;
+  margin: 15px;
+}
+
+.navbar ul{
+  overflow: auto;
+}
+
+.navbar li a{
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.navbar{
+  color: whitesmoke;
+  background-color: black;
+  border-radius: 13px
+}
+
+a:hover{
+  background-color: red;
+}
+
+#AN{
+  width: 500px;
+  margin: auto;
+  text-decoration: none;
+}
+
+a:visited{
+  background-color: #77FF00
+}
+
+h3{
+  float: center;
+  text-align: center;
+  color: darkgrey;
+}
+
+::placeholder{
+  color: firebrick;
+}
+
+#con{
+  color: fuchsia;
+  border: 2px solid darkviolet;
+  border-radius: 7px
+}
+
+
+/* =========================================================
+SIDEBAR
+SAME SIDEBAR PROPERTIES AS INDEX.HTML
+========================================================= */
+
+:root {
+
+    --sidebar-black: #090909;
+
+    --sidebar-dark: #11110f;
+
+    --sidebar-white: #d8d1c4;
+
+    --sidebar-grey: #817b71;
+
+    --sidebar-line:
+        rgba(216, 209, 196, 0.22);
+
+    --sidebar-serif:
+        "Cinzel",
+        Georgia,
+        serif;
+
+}
+
+
+/* =========================================================
+SIDEBAR PAGE LOCK
+========================================================= */
+
+body.sidebar-open {
+
+    overflow: hidden;
+
+    touch-action: none;
+
+}
+
+body.sidebar-open main {
+
+    pointer-events: none;
+
+    user-select: none;
+
+}
+
+body.sidebar-open #sidebar {
+
+    pointer-events: auto;
+
+    touch-action: auto;
+
+}
+
+
+/* =========================================================
+SIDEBAR
+========================================================= */
+
+#sidebar {
+
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+
+    width: 270px;
+
+    height: 100vh;
+
+    background: #11110f;
+
+    border-right:
+        1px solid
+        rgba(216, 209, 196, 0.22);
+
+    padding: 30px 24px;
+
+    z-index: 10000;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition:
+        transform 0.35s ease;
+
+    overflow-y: auto;
+
+    transform:
+        translateX(-100%);
+
+}
+
+
+/* =========================================================
+SIDEBAR OPEN
+========================================================= */
+
+#sidebar.open {
+
+    transform:
+        translateX(0);
+
+}
+
+
+/* =========================================================
+SIDEBAR TOP
+========================================================= */
+
+.sidebar-top {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+}
+
+
+/* =========================================================
+SIDEBAR TITLE
+========================================================= */
+
+.sidebar-logo {
+
+    font-family:
+        var(--sidebar-serif);
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color:
+        var(--sidebar-white);
+
+}
+
+
+/* =========================================================
+CLOSE BUTTON
+========================================================= */
+
+#close-sidebar {
+
+    display: none;
+
+    background: none;
+
+    border: none;
+
+    color:
+        var(--sidebar-white);
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================================
+SIDEBAR NAVIGATION
+========================================================= */
+
+#sidebar nav {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 17px;
+
+    margin-top: 55px;
+
+}
+
+
+#sidebar .nav-link {
+
+    text-decoration: none;
+
+    color:
+        var(--sidebar-grey);
+
+    font-family:
+        var(--sidebar-serif);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+#sidebar .nav-link:hover {
+
+    color:
+        var(--sidebar-white);
+
+    transform:
+        translateX(5px);
+
+    background-color:
+        transparent;
+
+}
+
+
+/* =========================================================
+SIDEBAR NOTE
+========================================================= */
+
+.sidebar-note {
+
+    margin-top: 45px;
+
+    padding: 18px 0;
+
+    border-top:
+        1px solid
+        var(--sidebar-line);
+
+    border-bottom:
+        1px solid
+        var(--sidebar-line);
+
+}
+
+
+.sidebar-note span {
+
+    color:
+        var(--sidebar-grey);
+
+    font-family:
+        var(--sidebar-serif);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.sidebar-note p {
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    color:
+        var(--sidebar-grey);
+
+}
+
+
+/* =========================================================
+BIRTHDAY COUNTDOWN
+========================================================= */
+
+.countdown-box {
+
+    padding: 14px 0;
+
+}
+
+
+.countdown-box span,
+.countdown-box small {
+
+    display: block;
+
+    color:
+        var(--sidebar-grey);
+
+    font-family:
+        var(--sidebar-serif);
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.countdown-box strong {
+
+    display: block;
+
+    font-family:
+        var(--sidebar-serif);
+
+    font-size: 27px;
+
+    margin: 5px 0;
+
+    color:
+        var(--sidebar-white);
+
+}
+
+
+/* =========================================================
+SIDEBAR FOOTER
+========================================================= */
+
+.sidebar-footer {
+
+    color:
+        #5f5b54;
+
+    font-family:
+        var(--sidebar-serif);
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    margin-top: 10px;
+
+}
+
+
+/* =========================================================
+MOBILE MENU BUTTON
+========================================================= */
+
+#menu-button {
+
+    display: none;
+
+    position: fixed;
+
+    top: 20px;
+
+    left: 20px;
+
+    z-index: 9999;
+
+    border: none;
+
+    background: transparent;
+
+    color:
+        var(--sidebar-white);
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================================
+MOBILE SIDEBAR
+========================================================= */
+
+@media (max-width: 900px) {
+
+    #sidebar {
+
+        transform:
+            translateX(-100%);
+
+    }
+
+
+    #sidebar.open {
+
+        transform:
+            translateX(0);
+
+    }
+
+
+    #close-sidebar {
+
+        display: block;
+
+    }
+
+
+    #menu-button {
+
+        display: block;
+
+    }
+
+}
+
+
+/* =========================================================
+MOBILE SIDEBAR WIDTH
+========================================================= */
+
+@media (max-width: 500px) {
+
+    #sidebar {
+
+        width: 82vw;
+
+    }
+
+}
+/* =====================================================
+   SIDEBAR CINZEL FONT
+   SAME FONT USED BY index.html
+   ===================================================== */
+
+#sidebar,
+#sidebar .sidebar-top,
+#sidebar .sidebar-logo,
+#sidebar nav,
+#sidebar .nav-link,
+#sidebar .sidebar-note,
+#sidebar .sidebar-note span,
+#sidebar .sidebar-note p,
+#sidebar .countdown-box,
+#sidebar .countdown-box span,
+#sidebar .countdown-box strong,
+#sidebar .countdown-box small,
+#sidebar .sidebar-footer,
+#close-sidebar,
+#menu-button {
+
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+        
+    
+>
+
+}
+
+</style>
+
+
+<body bgcolor="yellow">
+
+
+<!-- =========================================================
+SIDEBAR
+COPIED FROM INDEX.HTML SIDEBAR SYSTEM
+========================================================= -->
+
+<aside id="sidebar">
+
+
+    <div class="sidebar-top">
+
+
+        <div class="sidebar-logo">
+
+            > ARCHIVES
+
+        </div>
+
+
+        <button
+            id="close-sidebar"
+            type="button"
+            aria-label="Close navigation"
+        >
+
+            ×
+
+        </button>
+
+
+    </div>
+
+
+    <!-- =====================================================
+    SIDEBAR NAVIGATION
+    ====================================================== -->
+
+    <nav>
+
+
+        <a
+            href="/home"
+            class="nav-link"
+        >
+
+            # HOME
+
+        </a>
+
+
+        <a
+            href="/home#interests"
+            class="nav-link"
+        >
+
+            # INTERESTS
+
+        </a>
+
+
+        <a
+            href="/home#actions"
+            class="nav-link"
+        >
+
+            # ACTIONS
+
+        </a>
+
+
+        <a
+            href="/home#future"
+            class="nav-link"
+        >
+
+            # $
+
+        </a>
+
+
+        <a
+            href="/home#photos"
+            class="nav-link"
+        >
+
+            # PHOTOS
+
+        </a>
+
+
+        <a
+            href=""
+            class="nav-link"
+        >
+
+            # SELF WRITTEN
+
+        </a>
+
+
+    </nav>
+
+
+    <!-- =====================================================
+    SIDEBAR NOTE
+    ====================================================== -->
+
+    <div class="sidebar-note">
+
+
+        <span>
+
+            NOTE_
+
+        </span>
+
+
+        <p>
+
+            A DAY IN FUTURE ||
+
+        </p>
+
+
+    </div>
+
+
+    <!-- =====================================================
+    NEXT BIRTHDAY
+    ====================================================== -->
+
+    <div class="countdown-box">
+
+
+        <span>
+
+            NEXT BIRTHDAY IN
+
+        </span>
+
+
+        <strong id="birthday-count">
+
+            —
+
+        </strong>
+
+
+        <small>
+
+            04 AUGUST
+
+        </small>
+
+
+    </div>
+
+
+    <!-- =====================================================
+    2036 COUNTDOWN
+    ====================================================== -->
+
+    <div class="countdown-box">
+
+
+        <span>
+
+            04 AUGUST 2036
+
+        </span>
+
+
+        <strong id="2036-count">
+
+            —
+
+        </strong>
+
+
+        <small>
+
+            DAYS REMAINING
+
+        </small>
+
+
+    </div>
+
+
+    <div class="sidebar-footer">
+
+        ■ PERSONAL
+
+    </div>
+
+
+</aside>
+
+
+<!-- =========================================================
+MOBILE MENU
+========================================================== -->
+
+<button
+    id="menu-button"
+    type="button"
+    aria-label="Open navigation"
+>
+
+    ☰
+
+</button>
+
+
+<!-- =========================================================
+ORIGINAL WRT CONTENT
+UNCHANGED
+========================================================= -->
+
+
+<header>
+
+  <nav>
+
+    <div class="navbar">
+
+      <ul>
+
+        <li>
+          <a href="#">
+            HOME
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            ABOUT PARTH
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            CONTACT ME
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </nav>
+
+</header>
+
+
+<h2>
+  HI EVERY ONE HERE THIS IS PARTH OWNER OF THIS WEBSITE
+</h2>
+
+
+<P id="up">
+
+  CHECK AND SUMBIT YOUR DETAILS HERE
+
+</P>
+
+
+<div>
+
+  <div>
+
+    <form action="backhend.js">
+
+
+      <label for="myName">
+        NAME:
+      </label>
+
+      <input
+        type="text"
+        placeholder="ENTER YOUR NAME"
+        name="myName"
+        id="myName"
+      >
+
+
+  </div>
+
+
+  <div>
+
+    <label for="role">
+      YOUR ROLE:
+    </label>
+
+    <input
+      type="text"
+      placeholder="ENTER YOUR ROLE"
+      name="myRole"
+      id="role"
+    >
+
+  </div>
+
+
+  <div>
+
+    <label for="age">
+      YOUR AGE:
+    </label>
+
+    <input
+      type="number"
+      placeholder="ENTER YOUR AGE"
+      name="myAge"
+      id="age"
+    >
+
+  </div>
+
+
+  <div>
+
+    <label for="date">
+      TODAY'S DATE
+    </label>
+
+    <input
+      type="date"
+      placeholder="ENTER TODAY'S DATE "
+      name="todayDate"
+      id="date"
+      value="ENTER THE DATE OF TODAY"
+    />
+
+  </div>
+
+
+  <label for="check">
+    DO YOU KNOW PARTH/VASU
+  </label>
+
+  <input
+    type="checkbox"
+    checked
+    name="eligeblity"
+    id="check"
+  >
+
+
+  <br>
+  <br>
+
+
+  <div>
+
+    YOUR GENDER &nbsp;
+
+    MALE:
+
+    <input
+      type="radio"
+      name="myGender"
+      id="gender"
+    >
+
+    <label for="GEender"></label>
+
+    FEMALE:
+
+    <input
+      type="radio"
+      name="myGender"
+      id="GEender"
+    >
+
+  </div>
+
+
+  <br>
+
+
+  <div>
+
+    YOUR RELATION WITH PARTH/VASU &nbsp;
+
+    <select
+      name="myRelation"
+      id="rrelation"
+      class="hkg"
+    >
+
+      <div>
+
+        <br>
+
+        <div>
+
+          <option value="bhai">
+            BHAI
+          </option>
+
+          <option value="dost">
+            DOST
+          </option>
+
+          <option value="TYPE CUSTOM">
+            TYPE CUSTOM
+          </option>
+
+        </div>
+
+      </div>
+
+    </select>
+
+  </div>
+
+
+  <div>
+
+    <br>
+
+    <label for="relation">
+
+      TYPE CUSTOM RELATION HERE
+
+    </label>
+
+    <input
+      type="text"
+      placeholder="ENTER YOUR RELATION"
+      name="myEmail"
+      id="relation"
+    >
+
+  </div>
+
+
+  <br>
+
+
+  <div>
+
+    <br>
+
+    PLEASE GIVE YOUR FEEDBACK HERE
+
+    <textarea
+      name="userFeedBack"
+      id="Feedback"
+      cols="30"
+      rows="10"
+      placeholder="PLEASE CONTACT TO VASU/PARTH IF THERE IS ANY PROBLEM IN WEBSITE"
+    ></textarea>
+
+  </div>
+
+
+  <input
+    type="submit"
+    name="SUMBIT.PHP"
+    id="SUMBIT"
+    value="SUMBIT NOW"
+  />
+
+
+  <input
+    type="reset"
+    name="reset data"
+    id="RESET"
+    value="RESET NOW"
+  />
+
+
+  </form>
+
+
+  <p id="down">
+
+    IF YOU ARE WATCHING OVER THIS WEB KINDLY INFORM OR CONTACT VASU/PARTH
+
+  </p>
+
+
+  <img
+    src="/images/VASU.jpg"
+    height="50%"
+    width="50%"
+    alt="KINDLY CHECK YOUR INTERNET OR RELOD WEBSITE"
+  >
+
+
+  <br>
+
+
+  <footer>
+    THIS IS PARTH 👆
+  </footer>
+
+
+  <br>
+
+
+  <div>
+
+    <p id="con">
+
+      CONTACT ME ANYWHERE IF YOU KNOW ME OR WATCHING OVER THIS WEB
+
+    </p>
+
+  </div>
+
+
+  <br>
+
+
+  <div>
+
+    <a
+      href="INSAT.HTML"
+      id="AN"
+    ></a>
+
+  </div>
+
+
+  <br>
+
+
+  <footer class="end"></footer>
+
+
+  <br/>
+
+
+  <h3></h3>
+
+
+  <div>
+
+    <audio
+      src="/audios /410.mp3"
+      controls=""
+    ></audio>
+
+  </div>
+
+
+  <!--enter java here-->
+
+  <script src="xlJAVA.js"></script>
+
+
+  <h2>
+    THE WEBSTITE IS DEAD
+  </h2>
+
+
+  <footer class="end">
+
+    TAKE UP TO
+
+    <a
+      class=""
+      id="AN"
+      href="https://.com"
+    >
+
+      NEW WEB
+
+    </a>
+
+  </footer>
+
+
+</div>
+
+
+<!-- =========================================================
+SIDEBAR JAVASCRIPT
+SAME OPEN / CLOSE / LOCK / SWIPE SYSTEM
+========================================================= -->
+
+<script>
+
+
+/* =================================================
+SIDEBAR
+================================================= */
+
+
+const sidebar =
+document.getElementById(
+"sidebar"
+);
+
+
+const menuButton =
+document.getElementById(
+"menu-button"
+);
+
+
+const closeSidebar =
+document.getElementById(
+"close-sidebar"
+);
+
+
+/*
+Open mobile sidebar.
+
+The body receives sidebar-open,
+which locks the page underneath.
+*/
+
+if (menuButton) {
+
+menuButton.addEventListener(
+"click",
+function () {
+
+sidebar.classList.add(
+"open"
+);
+
+document.body.classList.add(
+"sidebar-open"
+);
+
+}
+);
+
+}
+
+
+/*
+Close mobile sidebar.
+
+Removing sidebar-open returns
+the page to normal operation.
+*/
+
+if (closeSidebar) {
+
+closeSidebar.addEventListener(
+"click",
+function () {
+
+sidebar.classList.remove(
+"open"
+);
+
+document.body.classList.remove(
+"sidebar-open"
+);
+
+}
+);
+
+}
+
+
+/*
+Clicking a navigation link closes
+the mobile sidebar.
+
+DO NOT prevent the default action.
+
+Normal browser navigation remains intact.
+*/
+
+document
+.querySelectorAll(
+"#sidebar .nav-link"
+)
+.forEach(
+function (link) {
+
+link.addEventListener(
+"click",
+function () {
+
+sidebar.classList.remove(
+"open"
+);
+
+document.body.classList.remove(
+"sidebar-open"
+);
+
+}
+);
+
+}
+);
+
+
+/* =================================================
+SWIPE TO CLOSE SIDEBAR
+=================================================
+
+Swipe LEFT inside the sidebar = CLOSE
+
+The swipe is detected ONLY on the
+sidebar area, NOT on the whole screen.
+
+Existing sidebar features remain unchanged.
+================================================= */
+
+
+let sidebarTouchStartX = 0;
+
+
+if (sidebar) {
+
+sidebar.addEventListener(
+"touchstart",
+function (event) {
+
+sidebarTouchStartX =
+event.changedTouches[0].screenX;
+
+},
+{ passive: true }
+);
+
+
+sidebar.addEventListener(
+"touchend",
+function (event) {
+
+const sidebarTouchEndX =
+event.changedTouches[0].screenX;
+
+
+const swipeDistance =
+sidebarTouchEndX -
+sidebarTouchStartX;
+
+
+/*
+Swipe LEFT far enough
+to close the sidebar.
+*/
+
+if (
+swipeDistance < -60 &&
+document.body.classList.contains(
+"sidebar-open"
+)
+) {
+
+sidebar.classList.remove(
+"open"
+);
+
+document.body.classList.remove(
+"sidebar-open"
+);
+
+}
+
+},
+{ passive: true }
+);
+
+}
+
+
+/* =================================================
+BIRTHDAY COUNTDOWN
+Same values used by the main site.
+================================================= */
+
+
+const BIRTHDAY_MONTH =
+7;
+
+
+const BIRTHDAY_DAY =
+4;
+
+
+function getNextBirthday() {
+
+const now =
+new Date();
+
+
+let nextBirthday =
+new Date(
+now.getFullYear(),
+BIRTHDAY_MONTH,
+BIRTHDAY_DAY,
+0,
+0,
+0,
+0
+);
+
+
+if (
+nextBirthday <= now
+) {
+
+nextBirthday =
+new Date(
+now.getFullYear() + 1,
+BIRTHDAY_MONTH,
+BIRTHDAY_DAY,
+0,
+0,
+0,
+0
+);
+
+}
+
+
+return nextBirthday;
+
+}
+
+
+function updateBirthdayCountdown() {
+
+const now =
+new Date();
+
+
+const nextBirthday =
+getNextBirthday();
+
+
+const difference =
+nextBirthday -
+now;
+
+
+const days =
+Math.ceil(
+difference /
+(
+1000 *
+60 *
+60 *
+24
+)
+);
+
+
+const birthdayCount =
+document.getElementById(
+"birthday-count"
+);
+
+
+if (birthdayCount) {
+
+birthdayCount.textContent =
+days.toLocaleString();
+
+}
+
+}
+
+
+function update2036Countdown() {
+
+const now =
+new Date();
+
+
+const target =
+new Date(
+2036,
+7,
+4,
+0,
+0,
+0,
+0
+);
+
+
+const difference =
+target -
+now;
+
+
+const days =
+Math.max(
+0,
+Math.ceil(
+difference /
+(
+1000 *
+60 *
+60 *
+24
+)
+)
+);
+
+
+const count2036 =
+document.getElementById(
+"2036-count"
+);
+
+
+if (count2036) {
+
+count2036.textContent =
+days.toLocaleString();
+
+}
+
+}
+
+
+updateBirthdayCountdown();
+
+update2036Countdown();
+
+
+setInterval(
+updateBirthdayCountdown,
+60000
+);
+
+
+setInterval(
+update2036Countdown,
+60000
+);
+
+
+</script>
+
+
+</body>
+
+</html>
